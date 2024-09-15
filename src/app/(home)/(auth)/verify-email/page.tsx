@@ -16,7 +16,7 @@ const Page = () => {
 						<div className="grid gap-6 p-5 w-full">
 							<div className="text-center">
 								<h1 className="text-center text-2xl">
-									We've sent you an email.
+									We&apos;ve sent you an email.
 								</h1>
 								<p>
 									Your code has been sent to
