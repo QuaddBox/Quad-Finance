@@ -1,0 +1,40 @@
+/** @format */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body-wrap {
+	background-color: #060113;
+	color: white;
+	// margin-left: 0;
+	// margin-right: 0;
+	// max-width: 1280px;
+
+	.navitem__wrp {
+		background-color: #151021;
+		margin-top: 20px;
+	}
+
+	.how__it__works {
+		background-image: url(/bgimage.svg);
+		background-size: cover;
+		background-position: center;
+	}
+}
+.mantine-NativeSelect-wrapper {
+	background-color: #010312 !important;
+	color: white !important;
+	border: none !important;
+}
+
+.mantine-NativeSelect-input {
+	background-color: #010312 !important;
+	color: white !important;
+	border: none !important;
+}
+
+.mantine-NativeSelect-root {
+	background-color: #010312 !important;
+	color: white !important;
+}
