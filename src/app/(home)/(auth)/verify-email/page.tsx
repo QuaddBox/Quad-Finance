@@ -27,10 +27,10 @@ const Page = () => {
 							<div className="text-center">
 								<p className="text-[15px]">
 									Please check your inbox for an email from Quadd Finance.
-									Inside, you'll find a magic link—simply click on it to verify
-									your email address and complete the sign-up process. If you
-									don't see the email, be sure to check your spam or junk
-									folder.
+									Inside, you&apos;ll find a magic link—simply click on it to
+									verify your email address and complete the sign-up process. If
+									you don&apos;t see the email, be sure to check your spam or
+									junk folder.
 								</p>
 							</div>
 
@@ -39,7 +39,7 @@ const Page = () => {
 							</div>
 
 							<div className="flex items-center justify-center w-full py-4">
-								<Button className="w-[] bg-[#FBCA0A] text-[15px] rounded-sm py-6">
+								<Button className="w-[] bg-[#FBCA0A] text-[15px] text-[#181818] rounded-sm py-6">
 									Resend email
 								</Button>
 							</div>
