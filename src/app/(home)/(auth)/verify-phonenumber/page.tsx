@@ -1,80 +1,72 @@
 /** @format */
 "use client";
 import Logo from "@/components/Logo";
-import { countryCode } from "@/data";
-
-import {
-	Autocomplete,
-	AutocompleteItem,
-	Button,
-	Input,
-} from "@nextui-org/react";
-
+import { Button } from "@nextui-org/button";
+import Link from "next/link";
 import React from "react";
+import PinInput from "react-pin-input";
 
-const Page = () => {
+const page = () => {
 	return (
 		<>
-			<div className="signin-container relative flex py-10 flex-col items-center justify-center 2xl: px-0">
+			<div className="signin-container relative flex py-[3rem] flex-col items-center justify-center 2xl: px-0">
 				<div className="form-container w-full flex mx-auto flex-col justify-center px-96 space-y-6">
 					<div className="flex flex-col items-center space-y-2 text-center">
 						<Logo />
 					</div>
 
-					<div className="border-solid bg-[#100c1a] border-2 rounded-lg border-[#FBCA0A] p-5 w-full flex items-center justify-center">
-						<div className="grid gap-6 p-5 w-full ">
+					<div className="border-solid bg-[#100c1a] border-2 rounded-lg border-[#FBCA0A] mt-[3rem] p-5 w-full flex items-center justify-center">
+						<div className="grid gap-6 p-5 w-full">
 							<form>
-								<p className="text-center text-[20px]">
-									what’s your mobile number?
-								</p>
-								<div className="grid gap-2 py-3">
-									<div className="grid gap-1 py-2 text-[#fff]">
-										<Autocomplete
-											label="Country Dialing Code"
-											placeholder="Select country Code"
-											allowsCustomValue
-											defaultItems={countryCode}>
-											{(item) => (
-												<AutocompleteItem key={item.value}>
-													{item.value}
-												</AutocompleteItem>
-											)}
-										</Autocomplete>
-									</div>
+								<div>
+									<h1 className="text-center text-2xl">
+										Verify Your Phone Number
+									</h1>
+									<p className="text-center">
+										Your code has been sent to{" "}
+										<span className="font-bold text-[#FBCA0A]">
+											+234 610 419 9176
+										</span>{" "}
+										via SMS
+									</p>
+								</div>
 
-									<div className="grid gap-1 py-2 text-[#fff]">
-										<Input
-											label="Mobile Number"
-											placeholder="Enter your phonenumber"
-											variant="bordered"
-											type="email"
-											classNames={{
-												input: [
-													"bg-transparent",
-													"text-white dark:text-white/90",
-													"placeholder:text-[#fff]dark:placeholder:text-white/60",
-													"w-full",
-												],
-
-												innerWrapper: ["border-none"],
-
-												inputWrapper: [
-													"bg-[#D9D9D90D]",
-													"focus:text-[#8d8a91]",
-													"dark:hover:[#D9D9D90D]",
-													"group-data-[focus=true]:bg-[#D9D9D90D]",
-													"border-none",
-													"outline-none",
-												],
-											}}
-										/>
-									</div>
+								<div className="flex items-center justify-center py-5">
+									<PinInput
+										length={6}
+										style={{
+											// border: "1px solid #DDDDDD40",
+											outline: "none",
+											display: "flex",
+											alignItems: "center",
+											justifyContent: "center",
+											gap: "10px",
+										}}
+										inputStyle={{
+											outline: "none",
+											border: "1px solid #DDDDDD40",
+											backgroundColor: "#231e2c",
+										}}
+										inputFocusStyle={{ outline: "none" }}
+									/>
 								</div>
 
 								<div className="flex items-center justify-center w-full py-4">
-									<Button className="bg-[#FBCA0A] text-[18px] w-1/2 rounded-sm py-6">
-										Next Step
-									</Button>
+									<Link href={""}>
+										<Button className="bg-[#FBCA0A] px-5 text-[#181818] text-[18px] font-normal rounded-sm py-6">
+											Verify
+										</Button>
+									</Link>
+								</div>
+
+								<div>
+									<p className="text-[15px] text-center">
+										Did not receive code? {""}
+										<span className="text-[#FBCA0A]">
+											<Link href={""}>Request again</Link>
+											<span className="text-[#FFFFFFB2]"> in 00:52 secs</span>
+										</span>
+									</p>
 								</div>
 							</form>
 						</div>
@@ -85,4 +77,4 @@ const Page = () => {
 	);
 };
 
-export default Page;
+export default page;

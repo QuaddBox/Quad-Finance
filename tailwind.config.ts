@@ -10,7 +10,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/(autocomplete|button|checkbox|divider|snippet|ripple|spinner|input|listbox|popover|scroll-shadow).js"
+    "./node_modules/@nextui-org/theme/dist/components/(autocomplete|button|calendar|checkbox|divider|snippet|ripple|spinner|input|listbox|popover|scroll-shadow).js"
   ],
 	theme: {
 		extend: {},
